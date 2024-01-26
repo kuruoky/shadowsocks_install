@@ -890,7 +890,7 @@ install_shadowsocks_python(){
     fi
 
     cd ${shadowsocks_python_file} || exit
-    python setup.py install --record /usr/local/shadowsocks_python.log
+    python3 setup.py install --record /usr/local/shadowsocks_python.log
 
     if [ -f /usr/bin/ssserver ] || [ -f /usr/local/bin/ssserver ]; then
         chmod +x ${shadowsocks_python_init}
